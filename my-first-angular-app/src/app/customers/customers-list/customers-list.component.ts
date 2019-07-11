@@ -31,4 +31,8 @@ export class CustomersListComponent implements OnInit {
       });
   }
 
+  sort(prop: string){
+
+  }
+
 }
