@@ -13,16 +13,16 @@
     <tr *ngFor="let cust of filteredCustomers">  <!-- Asterisk symbol denotes that it is a structural directive-->
         <td>
             <a>
-              {{ cust.name | uppercase }}  
+              {{ cust.name | capitalize }}  
             </a>
         </td>
         <td>{{ cust.city }}</td>
-        <td>{{ cust.orderTotal }}</td>
+        <td>{{ cust.orderTotal | currency:currencyCode:'symbol' }}</td>
     </tr>
     <tr *ngIf = "filteredCustomers.length > 0"> <!-- Structural directives can change the structure of the DOM -->
         <td colspan="2">&nbsp;</td>
         <td>
-            {{ customersOrderTotal }}
+            {{ customersOrderTotal | currency: currencyCode:'symbol'}}
         </td>
     </tr>
     <tr *ngIf ="filteredCustomers.length == 0 ">
