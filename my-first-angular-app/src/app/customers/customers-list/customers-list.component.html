@@ -13,7 +13,7 @@
     <tr *ngFor="let cust of filteredCustomers">  <!-- Asterisk symbol denotes that it is a structural directive-->
         <td>
             <a>
-              {{ cust.name }}  
+              {{ cust.name | uppercase }}  
             </a>
         </td>
         <td>{{ cust.city }}</td>
